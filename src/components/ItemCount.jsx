@@ -1,22 +1,32 @@
-import React, { useState, useEffect} from "react";
+import React, { useState, useEffect } from "react";
 import Button from "react-bootstrap/Button";
 
-export default function Contador({initial, stock, onAdd}) {
-    const [contador, setContador] = useState(initial);
-      useEffect(() => {
-        console.log("se inicio el componente");
-      }, []);
-    return (
-        <div>
-            <h1>Contador: {contador}</h1>
+export default function Contador({ initial, stock, onAdd }) {
+  const [contador, setContador] = useState(initial);
+  // useEffect(() => {
+  //   console.log("se inicio el componente");
+  // }, []);
+
+  const suma = () => {
+    if (contador < stock) {
+      setContador(contador + 1);
+    }
+  };
+
+  const resta = () => {
+    if (contador > 0) {
+      setContador(contador - 1);
+    }
+  };
+
+  return (
+    <div>
+      <h1>Contador: {contador}</h1>
       <Button
         variant="danger"
         onClick={() => {
-          if (contador < stock){
-            setContador(contador + 1);
-            onAdd()
-          }
-          
+          suma();
+          onAdd();
         }}
       >
         +
@@ -24,9 +34,7 @@ export default function Contador({initial, stock, onAdd}) {
       <Button
         variant="warning"
         onClick={() => {
-          if (contador > 0) {
-            setContador(contador - 1)
-          };
+          resta();
         }}
       >
         -
@@ -34,13 +42,11 @@ export default function Contador({initial, stock, onAdd}) {
       <Button
         variant="primary"
         onClick={() => {
-          alert("Productos agregados al carrito")
+          alert("Productos agregados al carrito");
         }}
       >
         Agregar al carrito
       </Button>{" "}
-        </div>
-        
-    )
-    
+    </div>
+  );
 }

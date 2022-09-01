@@ -1,6 +1,6 @@
 import Carousel from "react-bootstrap/Carousel";
 
-function NoTransitionExample() {
+function Carrousell() {
   return (
     <Carousel slide={false}>
       <Carousel.Item>
@@ -55,4 +55,4 @@ function NoTransitionExample() {
   );
 }
 
-export default NoTransitionExample;
+export default Carrousell;
