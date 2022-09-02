@@ -10,7 +10,8 @@ export default function ItemListContainer({ item }) {
   const [listProducts, setListProducts] = useState([]);
 
   useEffect(() => {
-    customFetch(Items).then((data) => setListProducts(data));
+    customFetch(Items)
+    .then((data) => setListProducts(data));
   }, []);
 
   return (

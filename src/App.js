@@ -6,6 +6,9 @@ import Productos from './components/Productos';
 import Titulos from './components/Titulos';
 import ItemListContainer from './components/ItemListContainer';
 import ItemCount from './components/ItemCount';
+import TestApiContainer from './components/test/TestApiContainer';
+import ItemDetailContainer from './components/ItemDetailContainer';
+
 
 
 function App() {
@@ -22,8 +25,9 @@ function App() {
      
   return (
     <div className="App">
-      <NavBar/>
-      
+      <ItemDetailContainer/>
+      {/* <TestApiContainer/> */}
+      {/* <NavBar/>
       <Titulos item={tituloPrincipal}/>
       <Carrousel/>
       <Titulos item={tituloProductos}/>
@@ -34,7 +38,7 @@ function App() {
       <Productos item={producto3}/>
       <ItemCount item={producto3} initial={1} stock= {5} onAdd={onAdd}/>
       <ItemListContainer item={greeting}/>
-      <Footer/>
+      <Footer/> */}
     </div>
   );
 }
