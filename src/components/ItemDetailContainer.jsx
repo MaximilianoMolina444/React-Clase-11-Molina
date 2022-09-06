@@ -1,18 +1,23 @@
 import React, { useState, useEffect } from "react";
+import { data } from "../mocks/mockData";
 import ItemDetail from "./ItemDetail";
-import Items from "./Items";
 
 export default function ItemDetailContainer() {
-  const getItems = (products) => {
-    return new Promise((resolve, reject) => {
-      setTimeout(() => {
-        resolve(products);
-      }, 2000);
-    });
-  };
-  const [detailProducts, setDetailProducts] = useState([]);
+  const [detailProducts, setDetailProducts] = useState({});
+  const [loading, setLoading] = useState(true);
   useEffect(() => {
-    getItems(Items[5]).then((data) => setDetailProducts(data));
+    data
+      .then((res) => setDetailProducts(res.find((item) => item.id === 5)))
+      .catch((err) => console.log(err))
+      .finally(() => setLoading(false));
   }, []);
-  return <ItemDetail detailProducts={detailProducts} />;
+  return (
+    <div>
+      {loading ? (
+        <p>Cargando...</p>
+      ) : (
+        <ItemDetail detailProducts={detailProducts} />
+      )}
+    </div>
+  );
 }

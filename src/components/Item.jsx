@@ -1,20 +1,18 @@
-import React from 'react'
+import React from "react";
 import Button from "react-bootstrap/Button";
 import Card from "react-bootstrap/Card";
-import ItemCount from './ItemCount'
-
-
-export default function Item({producto}) {
-    return (
-        <div>
+export default function Item({ product }) {
+  const { imagen, descripcion, precio } = product;
+  return (
+    <div style={{ width: "18rem", paddingBottom: "5rem" }}>
       <Card style={{ width: "18rem" }}>
-        <Card.Img variant="top" src={producto.imagen} />
+        <Card.Img variant="top" src={imagen} style={{ height: "18rem" }} />
         <Card.Body>
-          <Card.Text>Precio: ${producto.precio}</Card.Text>
+          <Card.Text>Precio: ${precio}</Card.Text>
+          <Card.Text>Descripcion:{descripcion}</Card.Text>
           <Button variant="primary">¡Pedí la tuya!</Button>
-          <ItemCount initial={1} stock= {5}/>
         </Card.Body>
       </Card>
     </div>
-    )
+  );
 }

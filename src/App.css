@@ -6,6 +6,13 @@
   height: 40vmin;
   pointer-events: none;
 }
+.card-container {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
+  align-items: center;
+  flex-wrap: wrap;
+}
 
 @media (prefers-reduced-motion: no-preference) {
   .App-logo {

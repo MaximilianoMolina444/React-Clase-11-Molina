@@ -8,10 +8,10 @@ export default function ItemDetail({detailProducts}) {
     return (
         <div>
       <Card style={{ width: "18rem" }}>
-        <Card.Img variant="top" src={detailProducts.imagen} />
+        <Card.Img variant="top" src={detailProducts.imagen}  />
         <Card.Body>
           <Card.Text>Precio: ${detailProducts.precio}</Card.Text>
-          <Card.Text>Barbijo lavable super comodo para uso diario</Card.Text>
+          <Card.Text>Descripcion: {detailProducts.descripcion}</Card.Text>
           <Button variant="primary">¡Pedí la tuya!</Button>
           <ItemCount initial={1} stock= {5}/>
         </Card.Body>

@@ -1,14 +1,12 @@
 import React from "react";
 import Item from "./Item";
 
-const ItemList = ( {listProducts} ) => {
-  return(
-    <section className="text-center">
-    {listProducts.map((product) => {
-      return <Item producto={product} key = {product.id} initial={1} stock= {5} />;
-    })}
-  </section>
-    )
+const ItemList = ({ listProducts }) => {
+  return (
+    <div className="card-container">
+      {listProducts.map((product)=> <Item key={product.id} product={product}/>)}
+    </div>
+  );
 };
 
 export default ItemList;
