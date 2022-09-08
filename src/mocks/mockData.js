@@ -1,6 +1,6 @@
 const productos = [
     {
-      id: 1,
+      id: '1',
       nombre: "Remeras de bandas",
       imagen: "https://i.ibb.co/sm0nB9s/Sin-t-tulo2.jpg",
       descripcion:
@@ -10,7 +10,7 @@ const productos = [
       stock: 10,
     },
     {
-      id: 2,
+      id: '2',
       nombre: "Remeras de bandas",
       imagen: "https://i.ibb.co/XJw53Sq/Sin-t-tulo3.jpg",
       descripcion:
@@ -20,7 +20,7 @@ const productos = [
       stock: 5,
     },
     {
-      id: 3,
+      id: '3',
       nombre: "Barbijos",
       imagen: "https://i.ibb.co/TqkK0wN/Sin-t-tulo4.jpg",
       descripcion:
@@ -30,7 +30,7 @@ const productos = [
       stock: 7,
     },
     {
-      id: 4,
+      id: '4',
       nombre: "Remeras personalizadas",
       imagen: "https://i.ibb.co/4jJBvWc/sin-titulo5.jpg",
       descripcion:
@@ -40,7 +40,7 @@ const productos = [
       stock: 8,
     },
     {
-      id: 5,
+      id: '5',
       nombre: "Remeras personalizadas",
       imagen: "https://i.ibb.co/DQcjRvf/sin-titulo6.jpg",
       descripcion:
@@ -50,7 +50,7 @@ const productos = [
       stock: 3,
     },
     {
-      id: 6,
+      id: '6',
       nombre: "Barbijos",
       imagen: "https://i.ibb.co/p04Z84y/sin-titulo7.jpg",
       descripcion:
@@ -60,7 +60,7 @@ const productos = [
       stock: 2,
     },
     {
-      id: 7,
+      id: '7',
       nombre: "Pedidos especiales",
       imagen: "https://i.ibb.co/8MDVDhb/musculosa.jpg",
       descripcion:
@@ -70,7 +70,7 @@ const productos = [
       stock: 7,
     },
     {
-      id: 8,
+      id: '8',
       nombre: "Pedidos especiales",
       imagen: "https://i.ibb.co/gWJzxsh/vampires.jpg",
       descripcion:
@@ -80,7 +80,7 @@ const productos = [
       stock: 11,
     },
     {
-      id: 9,
+      id: '9',
       nombre: "Pedidos especiales",
       imagen: "https://i.ibb.co/vQk7BKK/deftones.jpg",
       descripcion:

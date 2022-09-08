@@ -3,9 +3,6 @@ import Button from "react-bootstrap/Button";
 
 export default function Contador({ initial, stock, onAdd }) {
   const [contador, setContador] = useState(initial);
-  // useEffect(() => {
-  //   console.log("se inicio el componente");
-  // }, []);
 
   const suma = () => {
     if (contador < stock) {
