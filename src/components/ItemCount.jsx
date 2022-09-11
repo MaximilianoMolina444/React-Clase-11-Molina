@@ -1,8 +1,8 @@
-import React, { useState, useEffect } from "react";
+import React from "react";
 import Button from "react-bootstrap/Button";
 
-export default function Contador({ initial, stock, onAdd }) {
-  const [contador, setContador] = useState(initial);
+export default function Contador({stock, onAdd, contador, setContador}) {
+  
 
   const suma = () => {
     if (contador < stock) {
@@ -18,12 +18,12 @@ export default function Contador({ initial, stock, onAdd }) {
 
   return (
     <div>
-      <h1>Contador: {contador}</h1>
+      <h1>En stock: {stock}</h1>
+      <h3>Comprar: {contador}</h3>
       <Button
         variant="danger"
         onClick={() => {
           suma();
-          onAdd();
         }}
       >
         +
@@ -39,7 +39,7 @@ export default function Contador({ initial, stock, onAdd }) {
       <Button
         variant="primary"
         onClick={() => {
-          alert("Productos agregados al carrito");
+          onAdd();
         }}
       >
         Agregar al carrito
