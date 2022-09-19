@@ -36,14 +36,21 @@ export default function Contador({stock, onAdd, contador, setContador}) {
       >
         -
       </Button>{" "}
-      <Button
+      {contador >= 1?(
+        <>
+        <Button
         variant="primary"
         onClick={() => {
           onAdd();
         }}
       >
         Agregar al carrito
-      </Button>{" "}
+      </Button>
+        </>
+      ):(
+        <>
+        </>
+      )}
     </div>
   );
 }
